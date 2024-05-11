@@ -2,10 +2,6 @@ import express from 'express'
 import * as dotenv from 'dotenv'
 import OpenAI from 'openai';
 
-// org-tQdXyoJnrTUt6CTspV3gcvD4
-
-
-
 dotenv.config()
 
 const router = express.Router()
