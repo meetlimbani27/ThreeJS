@@ -2,6 +2,7 @@ import express from 'express'
 import * as dotenv from 'dotenv'
 import OpenAI from 'openai';
 
+
 dotenv.config()
 
 const router = express.Router()
@@ -9,7 +10,6 @@ const router = express.Router()
 
 
 const openai = new OpenAI({
-    organization: "Find it in your account ",
     apiKey:process.env.OPENAI_API_KEY,
 })
 
