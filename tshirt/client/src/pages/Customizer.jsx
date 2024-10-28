@@ -22,7 +22,8 @@ const Customizer = () => {
   const [prompt, setPrompt] = useState("");
   const [generatingImg, setGeneratingImg] = useState(false);
 
-  const [activeEditorTab, setActiveEditorTab] = useState("");
+  const [activeEditorTab, setActiveEditorTab] = useState(""); // Initial state is closed
+
   const [activeFilterTab, setActiveFilterTab] = useState({
     logoShirt: true,
     stylishShirt: false,
@@ -131,7 +132,12 @@ const Customizer = () => {
                   <Tab
                     key={tab.name}
                     tab={tab}
-                    handleClick={() => setActiveEditorTab(tab.name)}
+                    handleClick={() => {
+                      // Toggle the activeEditorTab
+                      setActiveEditorTab((prev) =>
+                        prev === tab.name ? "" : tab.name
+                      );
+                    }}
                   />
                 ))}
 
